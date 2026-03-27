@@ -1,0 +1,26 @@
+.services-section { padding: 5rem 0; }
+.services-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; }
+.service-card { padding: 2rem; cursor: pointer; user-select: none; }
+.service-card--active { border-color: var(--service-color,var(--accent-primary)) !important; box-shadow: 0 0 0 1px var(--service-color,var(--accent-primary)), 0 20px 60px rgba(0,0,0,0.3); }
+.service-card:hover { border-color: var(--service-color,var(--accent-primary)); }
+.service-card__header { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; }
+.service-icon { font-size: 1.6rem; flex-shrink: 0; }
+.service-card__header h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.2rem; }
+.service-tagline { font-size: 0.82rem; color: var(--text-muted); }
+.service-toggle { margin-left: auto; font-size: 1.4rem; font-weight: 300; color: var(--text-secondary); flex-shrink: 0; }
+.service-desc { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; }
+.service-features { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.4s ease; opacity: 0; }
+.service-features--open { max-height: 400px; opacity: 1; margin-top: 1.5rem; }
+.service-features ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.service-features ul li { display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; color: var(--text-secondary); }
+.check { font-weight: 700; font-size: 0.85rem; }
+ 
+.process { padding: 5rem 0 6rem; border-top: 1px solid var(--border-color); margin-top: 2rem; }
+.process-steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem; margin-top: 3rem; }
+.process-step { text-align: center; }
+.step-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; display: block; margin-bottom: 0.75rem; }
+.process-step h4 { font-family: var(--font-display); font-weight: 700; margin-bottom: 0.5rem; }
+.process-step p { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.65; }
+ 
+@media (max-width: 1024px) { .process-steps { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 768px) { .services-grid { grid-template-columns: 1fr; } .process-steps { grid-template-columns: 1fr; } }

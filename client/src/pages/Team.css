@@ -1,0 +1,32 @@
+.leadership { padding: 5rem 0; }
+.leadership-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin-top: 2.5rem; }
+.leader-card { padding: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.leader-card:hover { border-color: var(--member-color,var(--accent-primary)); }
+.leader-avatar { position: relative; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; }
+.avatar-ring { position: absolute; inset: -4px; border-radius: 50%; border: 1px dashed; opacity: 0.3; animation: spin-slow 12s linear infinite; }
+.leader-info h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin-bottom: 0.25rem; }
+.leader-role { font-size: 0.85rem; font-weight: 600; font-family: var(--font-display); display: block; margin-bottom: 0.75rem; }
+.leader-info p { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem; }
+.leader-skills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.skill-tag { font-size: 0.75rem; font-weight: 600; font-family: var(--font-display); padding: 4px 12px; border: 1px solid; border-radius: 100px; }
+ 
+.full-team { padding: 5rem 0; border-top: 1px solid var(--border-color); }
+.dept-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 2rem 0 2.5rem; }
+.dept-btn { padding: 8px 20px; border: 1px solid var(--border-color); background: transparent; color: var(--text-secondary); font-family: var(--font-display); font-size: 0.85rem; font-weight: 600; border-radius: 100px; cursor: pointer; transition: var(--transition); }
+.dept-btn:hover { border-color: var(--accent-primary); color: var(--text-primary); }
+.dept-btn.active { background: var(--accent-primary); border-color: var(--accent-primary); color: #fff; }
+.team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem; }
+.member-card { padding: 2rem 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+.member-card:hover { border-color: var(--member-color,var(--accent-primary)); }
+.member-avatar { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1rem; font-weight: 800; margin-bottom: 0.5rem; }
+.member-card h4 { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; }
+.member-role { font-size: 0.8rem; color: var(--text-secondary); }
+.member-dept { font-size: 0.72rem; font-weight: 600; font-family: var(--font-display); padding: 3px 10px; border: 1px solid; border-radius: 100px; margin-top: 0.25rem; }
+ 
+.join-us { padding: 4rem 0 6rem; }
+.join-card { text-align: center; padding: 5rem 2rem; }
+.join-icon { font-size: 3rem; margin-bottom: 1.5rem; display: block; animation: float 4s ease-in-out infinite; }
+.join-card .section-subtitle { margin: 0 auto; }
+ 
+@media (max-width: 1024px) { .leadership-grid { grid-template-columns: 1fr; } .team-grid { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 768px) { .team-grid { grid-template-columns: repeat(2,1fr); } .join-card { padding: 3rem 1.5rem; } }
